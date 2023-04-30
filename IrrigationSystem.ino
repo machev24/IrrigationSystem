@@ -5,7 +5,7 @@ int sensorPin = A0;
 int sensorValue = 0;
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
-// Setup section is executed once3 on initialization
+// Setup section is executed once on initialization
 void setup() 
 {
   lcd.begin(16, 2);
@@ -26,7 +26,7 @@ void loop()
   lcd.print(sensorValue);
   lcd.print("%");
 
-  // If less than 50% message user ti act
+  // If less than 50% message user to act
   if(sensorValue <= 50)
   {
     lcd.setCursor(0, 1); // print on second row of lcd
